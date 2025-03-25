@@ -4,19 +4,16 @@ services:
     command: python -c "print('Hello from Python!')"
     ports:
       - "5000:5000"
-
   node-app:
     image: node:18
     command: node -e "console.log('Hello from Node.js!')"
     ports:
       - "3000:3000"
-
   nginx:
     image: nginx:latest
     command: [ "nginx", "-g", "daemon off;" ]
     ports:
       - "80:80"
-
   alpine:
     image: alpine:latest
     command: echo "Hello from Alpine!"
