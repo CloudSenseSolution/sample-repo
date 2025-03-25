@@ -1,19 +1,13 @@
-version: "3.8"
-
 services:
-
   python-app:
     image: python:3.9
     command: python -c "print('Hello from Python!')"
-
   node-app:
     image: node:18
     command: node -e "console.log('Hello from Node.js!')"
-
   nginx:
     image: nginx:latest
     command: [ "nginx", "-g", "daemon off;" ]
-
   alpine:
     image: alpine:latest
     command: echo "Hello from Alpine!"
